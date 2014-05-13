@@ -5,8 +5,8 @@ function SendMail($em_to,$subject,$mess)
 {
 	$headers  = 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-	$headers .= 'To: '.$em_to . "\r\n";
-    $headers .= 'From: Speedy-watch <noreply@Speedy-watch.net>' . "\r\n";
+	$headers .= 'To: ' . $em_to . "\r\n";
+    $headers .= 'From: X-zylo <noreply@x-zylo.net>' . "\r\n";
 	
 	mail($em_to, $subject, $mess, $headers);
 }
@@ -27,11 +27,11 @@ $mess = "Новый заказ Speedy-watch. <br/>ФИО: ".$fio." в колич
 fwrite($handle, $mess . PHP_EOL);
 fclose($handle);
 
-SendMail($adminEmail, 'Новый заказ Часов', $mess);
+SendMail($adminEmail, 'Новый заказ Часов x-zylo', $mess);
 
 $mess = <<<HDO
 Уважаемый $fio <br/>
-Вы заказали у нас на Speedy-watch.net часы ($kolvo шт.), указали адрес $adress, в течение рабочего дня с Вами свяжется наш менеджер для подтверждения заказа.<br/>
+Вы заказали у нас на xzylo.net часы ($kolvo шт.), указали адрес $adress, в течение рабочего дня с Вами свяжется наш менеджер для подтверждения заказа.<br/>
 Возникшие вопросы вы можете задать  по телефону $phone .<br/>
 Спасибо, что воспользовались нашими услугами!
 HDO;
