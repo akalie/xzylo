@@ -27,7 +27,7 @@ $mess = "Новый заказ x-zylo. <br/>ФИО: ".$fio." в количест
 fwrite($handle, $mess . PHP_EOL);
 fclose($handle);
 
-SendMail($adminEmail, 'Новый заказ Часов x-zylo', $mess);
+SendMail($adminEmail, 'Новый заказ x-zylo', $mess);
 
 $mess = <<<HDO
 Уважаемый $fio <br/>
