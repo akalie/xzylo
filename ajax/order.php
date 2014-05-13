@@ -22,7 +22,7 @@ $handle = fopen($logFilePath, 'a');
 
 $adminEmail = 'starsmaster@allsocial.ru';
 
-$mess = "Новый заказ Speedy-watch. <br/>ФИО: ".$fio." в количестве $kolvo <br/>"."E-mail: ".$email."<br/>"."<br/>Телефон: ".$tel."<br/>Адрес: ".$adress;
+$mess = "Новый заказ x-zylo. <br/>ФИО: ".$fio." в количестве $kolvo <br/>"."E-mail: ".$email."<br/>"."<br/>Телефон: ".$tel."<br/>Адрес: ".$adress;
 
 fwrite($handle, $mess . PHP_EOL);
 fclose($handle);
