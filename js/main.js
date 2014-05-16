@@ -80,6 +80,7 @@ $(function(){
 		});
 		if(err)
 			return false;
+        console.log(yaCounter24959906.reachGoal('xzyloBuy'));
 		var fio = form.find('input[name="fio"]').val();
 		var email = form.find('input[name="email"]').val();
 		var tel = form.find('input[name="tel"]').val();
