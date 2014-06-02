@@ -15,14 +15,14 @@ $fio = $_POST['fio'];
 $email = $_POST['email'];
 $tel = $_POST['tel'];
 $adress = $_POST['adress'];
-$kolvo = $_POST['kolvo'];
+
 $phone = '+7(909)588-64-58';
 $logFilePath = 'ordersLog.txt';
 $handle = fopen($logFilePath, 'a');
 
 $adminEmail = 'starsmaster@allsocial.ru';
 
-$mess = "Новый заказ x-zylo. <br/>ФИО: ".$fio." в количестве $kolvo <br/>"."E-mail: ".$email."<br/>"."<br/>Телефон: ".$tel."<br/>Адрес: ".$adress;
+$mess = "Новый заказ x-zylo. <br/>ФИО: ".$fio."<br/>"."E-mail: ".$email."<br/>"."<br/>Телефон: ".$tel."<br/>Адрес: ".$adress;
 
 fwrite($handle, $mess . PHP_EOL);
 fclose($handle);
@@ -31,7 +31,7 @@ SendMail($adminEmail, 'Новый заказ x-zylo', $mess);
 
 $mess = <<<HDO
 Уважаемый $fio <br/>
-Вы заказали у нас на xzylo.net фрисби ($kolvo шт.), указали адрес $adress, в течение рабочего дня с Вами свяжется наш менеджер для подтверждения заказа.<br/>
+Вы заказали у нас на xzylo.net фрисби, указали адрес $adress, в течение рабочего дня с Вами свяжется наш менеджер для подтверждения заказа.<br/>
 Возникшие вопросы вы можете задать  по телефону $phone .<br/>
 Спасибо, что воспользовались нашими услугами!
 HDO;

@@ -34,9 +34,8 @@
 						<form class=sval-form method=POST>
 						<input name=fio type=text sval="ФИО" value="ФИО"/>
 						<input name=email type=text sval="E-mail" value="E-mail"/>
-						<input name=tel type=text sval="Телефон" value="Телефон"/>
+						<input id="tel" name=tel type=text sval="+7(___) ___-__-__" value="+7(___) ___-__-__"/>
 						<input name=adress type=text sval="Адрес (индекс, город и т. д.)" value="Адрес (индекс, город и т. д.)"/>
-						<input name=kolvo type=text sval="Количество" value="Количество"/>
 						<button class="buy">КУПИТЬ</button>
 						</form>
 						<br/>
@@ -96,8 +95,7 @@
 			<div class=main>
 				<h1>Фрисби X-Zylo</h1>
 				<div class=video>
-                <iframe width="449" height="264" src="//www.youtube.com/embed/9U3xFu0MIdo" frameborder="0" allowfullscreen></iframe>
-					
+				<iframe type="text/html" width="449" height="264" src="http://www.youtube.com/embed/9U3xFu0MIdo" frameborder="0" allowfullscreen></iframe>	
 				</div>
 				<div class=info>
                     X-zylo это фрисби нового поколения. Благодаря гироскопическому эффекту, не смотря на свой легкий вес, оно улетает очень далеко, на 100-200 метров. 
@@ -246,10 +244,8 @@
 				</div>
 				<div class=oben>
 					<img src="images/bmap.png" />
-					<span class=obname>Доставка по всей России</span>
-					<div class=obdesc>Доставка во все города России.
-					Доставка курьером и пункты
-					самовывоза по всей Москве.</div>
+					<span class=obname>Доставка во все города России</span>
+					<div class=obdesc></div>
 				</div>
 				<div class=oben style="margin-right:0px;">
 					<img src="images/econom.png" />
@@ -294,9 +290,9 @@
 				<form class=sval-form method=POST>
 				<input name=fio type=text sval="ФИО" value="ФИО" />
 				<input name=email type=text sval="E-mail" value="E-mail"/>
-				<input name=tel type=text sval="Телефон" value="Телефон" />
+				<input id="tel2" name=tel type=text sval="+7(___) ___-__-__" value="+7(___) ___-__-__"/>
 				<input name=adress type=text sval="Адрес (индекс, город и т. д.)" value="Адрес (индекс, город и т. д.)"/>
-				<input name=kolvo type=text sval="Количество" value="Количество"/><br/>
+				<br/>
 				<button class="buy">Купить сейчас</button>
 				</form>
 				</center>
