@@ -99,7 +99,10 @@ $(function(){
 			url: "ajax/order.php",
 			data: "fio="+fio+"&email="+email+"&tel="+tel+"&adress="+adress+"&kolvo="+kolvo,
 			success: function(response){
-				openModal('suc_order');
+				if(response!='')
+					alert(response);
+				else
+					openModal('suc_order');
 				$('#scroller').click();
 			}
 		});
@@ -226,7 +229,10 @@ function setMask(I,M){
 		}
 	}
 	I.onfocus = function(){
-		setTimeout(function(){N(0,!j)},0)
+		setTimeout(function(){N(0,!j);
+		if(I.value == '+7(___) ___-__-__')
+			I.setSelectionRange(3, 3);
+		},0);
 	}
 	I.onblur = function(){
 		j ? N(' ',0,1) : this.value=''

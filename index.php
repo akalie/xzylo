@@ -25,7 +25,15 @@
 					<img src="images/logo.png" /><br/>
 					Фрисби нового поколения X-Zylo.
 				</div>
-				<div class=himg><img src="images/x-zylo.png"/></div>
+				<div class=himg style="margin-left:400px;">
+					<img align=left width=300 style="position:absolute;margin-top:200px;margin-left:50px;" src="images/x-zylo.png"/>
+					<div style="float:right;margin-left:350px;">
+						<div class=video>
+							<iframe type="text/html" width="449" height="264" src="http://www.youtube.com/embed/9U3xFu0MIdo" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class=clear></div>
+				</div>
 				<div class=block-exclusive>
 					<div class=ex-head></div>
 					<div class=ex-body>

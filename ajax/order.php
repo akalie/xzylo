@@ -18,6 +18,21 @@ $adress = $_POST['adress'];
 
 $phone = '+7(909)588-64-58';
 $logFilePath = 'ordersLog.txt';
+$logPhones= 'phonesLog.txt';
+
+$testPhone = file_get_contents($logPhones);
+
+if(strstr($testPhone, '|'.$tel.'|'))
+{
+	echo 'Нельзя заказывать несколько раз с одного номера телефона';
+	exit;
+}
+
+$handle = fopen($logPhones, 'a');
+
+fwrite($handle, '|'.$tel.'|');
+fclose($handle);
+
 $handle = fopen($logFilePath, 'a');
 
 $adminEmail = 'starsmaster@allsocial.ru';
