@@ -1,6 +1,9 @@
 <?php
 /* Sites-Stroy.ru by iProger */
 
+include 'Tools.php';
+include 'Api.php';
+
 function SendMail($em_to,$subject,$mess)
 {
     $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -44,6 +47,11 @@ fclose($handle);
 
 SendMail($adminEmail, 'Новый заказ x-zylo', $mess);
 
+$data = Api::pack(3, 'Umk4A&lr7ih&jU#As^5cyWmAnFWKQOQ1JXb-FB)Qv&)h3zMX$AQ-$3cRs94W*+wV', 1, 1, $email, $phone, '', 'покупаем хузло', $adress);
+
+if (!Api::doPostRequest($data)) {
+    echo $data;
+}
 $mess = <<<HDO
 Уважаемый $fio
 Вы заказали у нас на xzylo.net фрисби Xzylo, указали адрес ($adress), в течение рабочего дня с Вами свяжется наш менеджер для подтверждения заказа.
