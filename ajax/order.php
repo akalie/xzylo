@@ -48,10 +48,9 @@ fclose($handle);
 SendMail($adminEmail, 'Новый заказ x-zylo', $mess);
 
 $data = Api::pack(3, 'Umk4A&lr7ih&jU#As^5cyWmAnFWKQOQ1JXb-FB)Qv&)h3zMX$AQ-$3cRs94W*+wV', 1, 1, $email, $phone, '', 'покупаем хузло', $adress);
+Api::doPostRequest($data);
 
-if (!Api::doPostRequest($data)) {
-    echo $data;
-}
+
 $mess = <<<HDO
 Уважаемый $fio
 Вы заказали у нас на xzylo.net фрисби Xzylo, указали адрес ($adress), в течение рабочего дня с Вами свяжется наш менеджер для подтверждения заказа.
