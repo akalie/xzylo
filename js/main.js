@@ -1,4 +1,6 @@
 /* Sites-Stroy.ru by iProger */
+/* ебанное говно, зато дешего */
+
 $(function(){
 
 	var note = $('#note'),
@@ -73,40 +75,48 @@ $(function(){
 			$(this).val(sval);
 	});
 
-	$(".1buy").bind("click", function(e){
+	$(".sval-form").bind("submit", function(e){
 	    var form = $(this).parent();
 		var err = false;
+
 		form.find('input').each(function(){
 			if($(this).attr('name')!="kolvo" && ($(this).val()=="" || $(this).val()==$(this).attr('sval')))
 			{
-				alert("Заполните все поля!");
 				err = true;
 				return false;
 			}
 		});
-		if(err)
-			return false;
-        console.log(yaCounter24959906.reachGoal('xzyloBuy'));
+
+		if (err) {
+            alert("Заполните все поля!");
+            e.preventDefault();
+            return false;
+        }
+
+
 		var fio = form.find('input[name="fio"]').val();
 		var email = form.find('input[name="email"]').val();
 		var tel = form.find('input[name="tel"]').val();
 		var adress = form.find('input[name="adress"]').val();
 		var kolvo = form.find('input[name="kolvo"]').val();
-		if(kolvo=="Количество")
-			kolvo = 1;
-		$.ajax({
-			type: "POST",
-			url: "ajax/order.php",
-			data: "fio="+fio+"&email="+email+"&tel="+tel+"&adress="+adress+"&kolvo="+kolvo,
-			success: function(response){
-				if(response!='')
-					alert(response);
-				else
-					openModal('suc_order');
-				$('#scroller').click();
-			}
-		});
-		return false;
+
+        if (kolvo=="Количество") {
+            kolvo = 1;
+        }
+
+        form.find('input[name="kolvo"]').val(kolvo);
+
+        //Все заебебца отправляем и сбрасываем
+        setTimeout(function () {
+            form.find('input').each(function () {
+                var $e = $(this);
+
+                $e.val($e.attr('sval'));
+            });
+        }, 500);
+
+        window.open('', 'xzylo', 'top=200,left=200,width=450,height=300,resizable=yes,scrollbars=yes');
+		return true;
 	});
 
 });

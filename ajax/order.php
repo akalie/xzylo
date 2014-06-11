@@ -59,16 +59,41 @@ SendMail($email, 'Ваш заказ', $mess);
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Фрисби нового поколения X-Zylo</title>
-    <link media="all" rel="stylesheet" type="text/css" href="css/style.css" />
-    <link media="all" rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
-    <link media="all" rel="stylesheet" type="text/css" href="css/gallery.css" />
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="js/jquery.countdown.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <LINK rel="icon" href="images/favicon.png" type="image/x-icon">
+    <LINK rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link media="all" rel="stylesheet" type="text/css" href="/css/style.css" />
+    <style>
+        body {
+            background-color: #D6D6D6 ;
+            padding: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        button {
+            padding:7px 40px 7px 40px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .content {
+            padding-top: 50px;
+        }
+
+        .btn-w {
+            padding-top: 20px;
+            width: 100px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
-<p>Мы отправили на ваш email письмо с данными заказа, если вы его там не нашли - посмотрите в спаме.</p>
+<div class="content">
+    <p>Мы отправили на ваш email письмо с данными заказа, если вы его там не нашли - посмотрите в спаме.</p>
+    <div class="btn-w"><button onclick="window.close()">Ok</button></div>
+</div>
 <iframe src="http://track.adwad.ru/SL1sF?adv_sub=3" scrolling="no" frameborder="0" width="1" height="1"></iframe>
-
 </body>
