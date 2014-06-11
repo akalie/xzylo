@@ -73,7 +73,7 @@ $(function(){
 			$(this).val(sval);
 	});
 
-	$(".buy").bind("click", function(e){
+	$(".1buy").bind("click", function(e){
 	    var form = $(this).parent();
 		var err = false;
 		form.find('input').each(function(){

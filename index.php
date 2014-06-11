@@ -39,12 +39,12 @@
 					<div class=ex-body>
 						<div class=stock-price></div>
 						<small>Заполните пожалуйста поля</small>
-						<form class=sval-form method=POST>
-						<input name=fio type=text sval="ФИО" value="ФИО"/>
-						<input name=email type=text sval="E-mail" value="E-mail"/>
-						<input id="tel" name=tel type=text sval="+7(___) ___-__-__" value="+7(___) ___-__-__"/>
-						<input name=adress type=text sval="Адрес (индекс, город и т. д.)" value="Адрес (индекс, город и т. д.)"/>
-						<button class="buy">КУПИТЬ</button>
+						<form class=sval-form method=POST action="ajax/order.php">
+                            <input name=fio type=text sval="ФИО" value="ФИО"/>
+                            <input name=email type=text sval="E-mail" value="E-mail"/>
+                            <input id="tel" name=tel type=text sval="+7(___) ___-__-__" value="+7(___) ___-__-__"/>
+                            <input name=adress type=text sval="Адрес (индекс, город и т. д.)" value="Адрес (индекс, город и т. д.)"/>
+                            <input type="submit" class="buy" value="КУПИТЬ">
 						</form>
 						<br/>
 					</div>
@@ -348,5 +348,7 @@
        <noscript><div><img src="//mc.yandex.ru/watch/24959906" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
        <!-- /Yandex.Metrika counter -->
    </div>
+
+
 </body>
 </html>
