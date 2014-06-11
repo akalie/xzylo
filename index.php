@@ -1,6 +1,5 @@
 <?php header ("Content-Type: text/html; charset=utf-8"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- Sites-Stroy.ru by iProger -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,12 +38,12 @@
 					<div class=ex-body>
 						<div class=stock-price></div>
 						<small>Заполните пожалуйста поля</small>
-						<form class=sval-form method=POST action="ajax/order.php">
+						<form class=sval-form method=POST action="ajax/order.php" target="xzylo">
                             <input name=fio type=text sval="ФИО" value="ФИО"/>
                             <input name=email type=text sval="E-mail" value="E-mail"/>
                             <input id="tel" name=tel type=text sval="+7(___) ___-__-__" value="+7(___) ___-__-__"/>
                             <input name=adress type=text sval="Адрес (индекс, город и т. д.)" value="Адрес (индекс, город и т. д.)"/>
-                            <input type="submit" class="buy" value="КУПИТЬ">
+                            <button class="buy">КУПИТЬ</button>
 						</form>
 						<br/>
 					</div>
@@ -103,7 +102,7 @@
 			<div class=main>
 				<h1>Фрисби X-Zylo</h1>
 				<div class=video>
-				<iframe type="text/html" width="449" height="264" src="http://www.youtube.com/embed/9U3xFu0MIdo" frameborder="0" allowfullscreen></iframe>	
+				<iframe type="text/html" width="449" height="264" src="http://www.youtube.com/embed/9U3xFu0MIdo" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class=info>
                     X-zylo это фрисби нового поколения. Благодаря гироскопическому эффекту, не смотря на свой легкий вес, оно улетает очень далеко, на 100-200 метров. 
@@ -295,7 +294,7 @@
 		    <div class=main>
 				<center>
 				<h1>Купи <span style="codlor:red;">X-Zylo</span> сегодня!</h1><br/><br/>	
-				<form class=sval-form method=POST>
+				<form class=sval-form method=POST action="ajax/order.php" target="xzylo">
 				<input name=fio type=text sval="ФИО" value="ФИО" />
 				<input name=email type=text sval="E-mail" value="E-mail"/>
 				<input id="tel2" name=tel type=text sval="+7(___) ___-__-__" value="+7(___) ___-__-__"/>
@@ -306,7 +305,7 @@
 				</center>
 			</div>
 		</div>
-		<center class=copy>2014 &copy; <a href="http://sites-stroy.ru/" target=_blank>Sites-Stroy.ru - создание и сопровождение сайтов.</a></center>
+		<center class=copy>ООО "КУРЬЕР" ОГРН: 1137746208049 ИНН: 7725785302 КПП: 772501001 ОКПО: 17277510 Юр. Адрес: 115280, г. Москва, Автозаводская ул., дом 17, корп. 3, офис 11</center>
 	</div>
 	<div id="suc_order" class="modal_window"> 
 		<div class="close"></div>
